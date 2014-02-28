@@ -1,0 +1,17 @@
+From: Sasha Harris-Cronin <sasha@mortalspaces.com>
+Date: September 23, 2005 11:25:27 AM EDT
+To: ITP Alumni <itp-alumni@forums.nyu.edu>
+Subject: Re: kiosk worthy analog joysticks?
+Reply-To: ITP Alumni <itp-alumni@forums.nyu.edu>
+
+Thanks!
+
+We use Happ for almost everything.  Unfortunately, the analog  
+joysticks (the ones in the review are digital) that they list are pot- 
+driven, which is not ideal.  Pots wear out and are not terribly  
+accurate.  An optical encoder would be far better.  They have one  
+listed as optical, but since there are no datasheets, I can't figure  
+out if they give full analog values.  And they seem to ignore their  
+phone as a matter of course.
+
+sasha.

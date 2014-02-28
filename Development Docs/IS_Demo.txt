@@ -1,0 +1,83 @@
+IS Demo Procedure
+
+1. Implementation of the Bayesian Spam Filter
+
+	1. Initializing the Spam Filter and the Knowledge Base
+			Java SE 1.5
+			Parameters in a app.config file - Threshold of the spamicity, # interesting words (max(|threshold-spamicity|))
+	2. Train the knowledge Base with Training data
+			Hash Table
+			Training Data Sets(Legitimate and Spam)- each containing about 1000 mails
+			Tokanization done with regular expression "\\w+" - alpha numeric words
+			Algorithm will count each occurrence of a token - Good count is added by multiplying 2 to be safe from false positive
+			Finalize by considering all tokens and calculate spamicity = in(spam) / ( in(spam) + in(legitimate) )
+	3. Analyze the mail and check for spam
+			Parsed into tokens
+			Most interesting fifteen tokens are used to calculate the spamicity
+			Using the threshold value, check if spam or not. As our testing, 0.85 would be the best threshold value.
+	4. Update the knowledge base
+			Use the tokens in the mail and update/train the knowledge base
+	5. Store the mails in relevant Mail Boxes.
+			If the mail is spam we store it in the spam folder and if it is a legitimate mail then we store it in the inbox.
+	6. Can use the javadoc: file:///D:/Projects/Java/SpamFilter/dist/javadoc/index.html		
+	
+	
+2. Checking for accuracy
+			
+
+3. Advantage
+	Evolves with spams
+	In normal filters: use “fashi0n” word instead of “fashion” but here it will be learnt. And have to change infranstructure every time.
+	
+4. Future Enhancements
+		
+	1. Preserving Case
+			“free” and “Free” would be two - different spamicity values
+			High Accuracy but high storage capacity of KB is needed
+			
+	2. Exclamation marks, periods and commas are constituent characters
+	
+	3. Context sensitive tokens
+			Take 2 or 3 words together to calculate spamicity
+			Relation based on adjecent words
+	
+	4. Differ tokens from To, From, Subject and Message body fields of the mail
+	
+	5. Sender himself can be taken as a factor of spamicity.
+			Evaluate and give value to the sender. Once or twice or ... caught, then always a spammer.
+			
+Demo:
+
+Good Mail
+*************************************************************************
+Party at my place
+
+Hey guys,
+
+Therz gonna be a blast at ma plc tonight.
+Bring all your STUFF.
+Be there by 0900h.
+
+Cheers!
+*************************************************************************
+
+Bad Mail
+*************************************************************************
+From: "Tiffany & Co.Ring" <contact@hereyourcover.info>
+Date: January 31, 2006 4:12:03 PM EST
+To: daniel@shiffman.net
+Subject: Your Complimentary Tiffany & Co. $1200 Ring
+
+
+If you can't read or see this email, Go Here
+
+
+Offer valid only to US residents who are at least 18 years of age.  
+Trademarks listed above are not affiliated with nor make any  
+endorsement of products and services provided by PlatinumRewardsClub.  
+Please complete all steps as outlined in the Terms and Conditions to  
+get the Gift. You can unsubscribe from receiving site updates,  
+offers, and promo from PlatinumRewardsClub by: clicking this link to  
+unsubscribe. Mailing address: PlatinumRewardsClub Customer Service,  
+7095 Hollywood Boulevard, Suite 710, Hollywood, CA 90028
+*************************************************************************

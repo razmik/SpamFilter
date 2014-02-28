@@ -1,0 +1,5 @@
+spammer1@gmail.com 2
+spammer2@gmail.com 3
+spammer3@gmail.com 4
+spammer4@gmail.com 5
+spammer5@gmail.com 1
